@@ -15,7 +15,11 @@ namespace Movies_and_Series
         public Form1()
         {
             InitializeComponent();
+            panelSeries.Visible = false;
+            panel1Movie.Visible = false;
         }
+
+        
 
       
     }
