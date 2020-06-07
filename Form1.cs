@@ -7,6 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+//TODO: 1. Movies button events
+//      2. Series buttons events
+//      3. help button
+//      4. about button
+//      5. Make form for the button events
 
 namespace Movies_and_Series
 {
