@@ -12,15 +12,34 @@ namespace Movies_and_Series
 {
     public partial class Form1 : Form
     {
+        Form activeForm = null;
         public Form1()
         {
             InitializeComponent();
             panelSeries.Visible = false;
             panel1Movie.Visible = false;
         }
+        private void OpenChildForm(Form ChildForm)
+        {
+            if (activeForm != null)
+                activeForm.Close();
+            activeForm = ChildForm;
+            ChildForm.FormBorderStyle = FormBorderStyle.None;
+            ChildForm.TopLevel = false;
+            ChildForm.Dock = DockStyle.Fill;
+            panelChildForm.Controls.Add(ChildForm);
+            ChildForm.BringToFront(); //ennek utána jár
+            ChildForm.Show();
+        }
 
-        
+        private void button1Movie_Click(object sender, EventArgs e)
+        {
+            Methods.HideOrShowSubMenu(panel1Movie);
+        }
 
-      
+        private void SeriesButton_Click(object sender, EventArgs e)
+        {
+            Methods.HideOrShowSubMenu(panelSeries);
+        }
     }
 }

@@ -3,14 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Movies_and_Series
 {
     public static class Methods
     {
-        public static void HideOrShowSubMenu()
-        { 
-                
+        public static void HideOrShowSubMenu(Panel panel)
+        {
+            if (panel.Visible == false)
+                panel.Visible = true;
+            else panel.Visible = false;
         }
     }
 }
