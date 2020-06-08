@@ -15,14 +15,14 @@ using System.Windows.Forms;
 
 namespace Movies_and_Series
 {
-    public partial class Form1 : Form
+    public partial class FormMain : Form
     {
         Form activeForm = null;
-        public Form1()
+        public FormMain()
         {
             InitializeComponent();
             panelSeries.Visible = false;
-            panel1Movie.Visible = false;
+            panelMovie.Visible = false;
         }
         private void OpenChildForm(Form ChildForm)
         {
@@ -39,12 +39,42 @@ namespace Movies_and_Series
 
         private void button1Movie_Click(object sender, EventArgs e)
         {
-            Methods.HideOrShowSubMenu(panel1Movie);
+            Methods.HideOrShowSubMenu(panelMovie);
         }
 
         private void SeriesButton_Click(object sender, EventArgs e)
         {
             Methods.HideOrShowSubMenu(panelSeries);
+        }
+
+        private void buttonMoviesList_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FormMoviesAndSeriesList());
+        }
+
+        private void buttonMoviesUpload_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FormMovieUpload());
+        }
+
+        private void buttonStaredMovies_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FormMoviesAndSeriesList());
+        }
+
+        private void buttonSeriesList_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FormMoviesAndSeriesList());
+        }
+
+        private void buttonSeriesUpload_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FormSeriesUpload());
+        }
+
+        private void buttonStaredSeries_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FormMoviesAndSeriesList());
         }
     }
 }

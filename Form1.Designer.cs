@@ -1,6 +1,6 @@
 ﻿namespace Movies_and_Series
 {
-    partial class Form1
+    partial class FormMain
     {
         /// <summary>
         /// Required designer variable.
@@ -36,7 +36,7 @@
             this.buttonSeriesUpload = new System.Windows.Forms.Button();
             this.buttonSeriesList = new System.Windows.Forms.Button();
             this.SeriesButton = new System.Windows.Forms.Button();
-            this.panel1Movie = new System.Windows.Forms.Panel();
+            this.panelMovie = new System.Windows.Forms.Panel();
             this.buttonStaredMovies = new System.Windows.Forms.Button();
             this.buttonMoviesUpload = new System.Windows.Forms.Button();
             this.buttonMoviesList = new System.Windows.Forms.Button();
@@ -45,7 +45,7 @@
             this.panelChildForm = new System.Windows.Forms.Panel();
             this.panel1SideMenu.SuspendLayout();
             this.panelSeries.SuspendLayout();
-            this.panel1Movie.SuspendLayout();
+            this.panelMovie.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1SideMenu
@@ -55,7 +55,7 @@
             this.panel1SideMenu.Controls.Add(this.buttonHelp);
             this.panel1SideMenu.Controls.Add(this.panelSeries);
             this.panel1SideMenu.Controls.Add(this.SeriesButton);
-            this.panel1SideMenu.Controls.Add(this.panel1Movie);
+            this.panel1SideMenu.Controls.Add(this.panelMovie);
             this.panel1SideMenu.Controls.Add(this.button1Movie);
             this.panel1SideMenu.Controls.Add(this.panel1Logo);
             this.panel1SideMenu.Dock = System.Windows.Forms.DockStyle.Left;
@@ -131,6 +131,7 @@
             this.buttonStaredSeries.Text = "Started Series";
             this.buttonStaredSeries.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonStaredSeries.UseVisualStyleBackColor = false;
+            this.buttonStaredSeries.Click += new System.EventHandler(this.buttonStaredSeries_Click);
             // 
             // buttonSeriesUpload
             // 
@@ -149,6 +150,7 @@
             this.buttonSeriesUpload.Text = "Series Upload";
             this.buttonSeriesUpload.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonSeriesUpload.UseVisualStyleBackColor = false;
+            this.buttonSeriesUpload.Click += new System.EventHandler(this.buttonSeriesUpload_Click);
             // 
             // buttonSeriesList
             // 
@@ -167,6 +169,7 @@
             this.buttonSeriesList.Text = "Series List";
             this.buttonSeriesList.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonSeriesList.UseVisualStyleBackColor = false;
+            this.buttonSeriesList.Click += new System.EventHandler(this.buttonSeriesList_Click);
             // 
             // SeriesButton
             // 
@@ -188,17 +191,17 @@
             this.SeriesButton.UseVisualStyleBackColor = false;
             this.SeriesButton.Click += new System.EventHandler(this.SeriesButton_Click);
             // 
-            // panel1Movie
+            // panelMovie
             // 
-            this.panel1Movie.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.panel1Movie.Controls.Add(this.buttonStaredMovies);
-            this.panel1Movie.Controls.Add(this.buttonMoviesUpload);
-            this.panel1Movie.Controls.Add(this.buttonMoviesList);
-            this.panel1Movie.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1Movie.Location = new System.Drawing.Point(0, 156);
-            this.panel1Movie.Name = "panel1Movie";
-            this.panel1Movie.Size = new System.Drawing.Size(233, 143);
-            this.panel1Movie.TabIndex = 1;
+            this.panelMovie.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.panelMovie.Controls.Add(this.buttonStaredMovies);
+            this.panelMovie.Controls.Add(this.buttonMoviesUpload);
+            this.panelMovie.Controls.Add(this.buttonMoviesList);
+            this.panelMovie.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelMovie.Location = new System.Drawing.Point(0, 156);
+            this.panelMovie.Name = "panelMovie";
+            this.panelMovie.Size = new System.Drawing.Size(233, 143);
+            this.panelMovie.TabIndex = 1;
             // 
             // buttonStaredMovies
             // 
@@ -217,6 +220,7 @@
             this.buttonStaredMovies.Text = "Started Movies";
             this.buttonStaredMovies.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonStaredMovies.UseVisualStyleBackColor = false;
+            this.buttonStaredMovies.Click += new System.EventHandler(this.buttonStaredMovies_Click);
             // 
             // buttonMoviesUpload
             // 
@@ -235,6 +239,7 @@
             this.buttonMoviesUpload.Text = "Movie Upload";
             this.buttonMoviesUpload.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonMoviesUpload.UseVisualStyleBackColor = false;
+            this.buttonMoviesUpload.Click += new System.EventHandler(this.buttonMoviesUpload_Click);
             // 
             // buttonMoviesList
             // 
@@ -253,6 +258,7 @@
             this.buttonMoviesList.Text = "Movies List";
             this.buttonMoviesList.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonMoviesList.UseVisualStyleBackColor = false;
+            this.buttonMoviesList.Click += new System.EventHandler(this.buttonMoviesList_Click);
             // 
             // button1Movie
             // 
@@ -290,7 +296,7 @@
             this.panelChildForm.Size = new System.Drawing.Size(582, 687);
             this.panelChildForm.TabIndex = 1;
             // 
-            // Form1
+            // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -302,15 +308,15 @@
             this.Font = new System.Drawing.Font("Microsoft PhagsPa", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
-            this.Name = "Form1";
+            this.Name = "FormMain";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.Text = "Form1";
+            this.Text = "Movies and Series";
             this.panel1SideMenu.ResumeLayout(false);
             this.panel1SideMenu.PerformLayout();
             this.panelSeries.ResumeLayout(false);
             this.panelSeries.PerformLayout();
-            this.panel1Movie.ResumeLayout(false);
-            this.panel1Movie.PerformLayout();
+            this.panelMovie.ResumeLayout(false);
+            this.panelMovie.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -318,7 +324,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1SideMenu;
-        private System.Windows.Forms.Panel panel1Movie;
+        private System.Windows.Forms.Panel panelMovie;
         private System.Windows.Forms.Button buttonStaredMovies;
         private System.Windows.Forms.Button buttonMoviesUpload;
         private System.Windows.Forms.Button buttonMoviesList;
