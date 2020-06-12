@@ -19,11 +19,19 @@ namespace Movies_and_Series
 
         private void ButtonAdd_Click(object sender, EventArgs e)
         {
-            Program.MoviesList.Add(new Movie(textBoxName.Text, 
-                                            numericUpDownYear.Value.ToString(), 
-                                            richTextBoxDescripton.Text, 
-                                            textBoxActors.Text.Split(',')));
-            Methods.ResetForm(this);
+            try
+            {
+                Program.MoviesList.Add(new Movie(textBoxName.Text,
+                                                    numericUpDownYear.Value.ToString(),
+                                                    richTextBoxDescripton.Text,
+                                                    textBoxActors.Text.Split(',')));
+                Methods.ResetForm(this);
+                MessageBox.Show("Succesful!");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Please set all parameters");
+            }
         }
     }
 }

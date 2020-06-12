@@ -21,13 +21,22 @@ namespace Movies_and_Series
 
         private void ButtonAdd_Click(object sender, EventArgs e)
         {
-            Program.SeriesList.Add(new Series(textBoxName.Text, 
-                                              numericUpDownYear.Value.ToString(),
-                                              richTextBoxDescription.Text, 
-                                              numericUpDownSeason.Value.ToString(), 
-                                              numericUpDownEpisode.Value.ToString(), 
-                                              textBoxActors.Text.Split(';')));
-            Methods.ResetForm(this);
+
+            try
+            {
+                Program.SeriesList.Add(new Series(textBoxName.Text,
+                                                     numericUpDownYear.Value.ToString(),
+                                                     richTextBoxDescription.Text,
+                                                     numericUpDownSeason.Value.ToString(),
+                                                     numericUpDownEpisode.Value.ToString(),
+                                                     textBoxActors.Text.Split(';')));
+                Methods.ResetForm(this);
+                MessageBox.Show("Succesful");
+            }
+            catch (NoNullAllowedException)
+            {
+                MessageBox.Show("Please set all parameters");
+            }
             //MessageBox.Show(typeof(NumericUpDown).ToString());
         }
     }

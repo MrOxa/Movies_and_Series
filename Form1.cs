@@ -8,8 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 //TODO: 1. Make XML reader and writer methods
-//      2. Movies button funcionality
-//      
+//      2. isStared property set 
+//      3. Search in Lists
 
 
 namespace Movies_and_Series
