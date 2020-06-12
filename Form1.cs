@@ -7,11 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-//TODO: 1. Movies button events
-//      2. Series buttons events
-//      3. help button
-//      4. about button
-//      5. Make form for the button events
+//TODO: 1. Make XML reader and writer methods
+//      2. Movies button funcionality
+//      
+
 
 namespace Movies_and_Series
 {
@@ -37,7 +36,7 @@ namespace Movies_and_Series
             ChildForm.Show();
         }
 
-        private void button1Movie_Click(object sender, EventArgs e)
+        private void Button1Movie_Click(object sender, EventArgs e)
         {
             Methods.HideOrShowSubMenu(panelMovie);
         }
@@ -47,34 +46,44 @@ namespace Movies_and_Series
             Methods.HideOrShowSubMenu(panelSeries);
         }
 
-        private void buttonMoviesList_Click(object sender, EventArgs e)
+        private void ButtonMoviesList_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FormMoviesAndSeriesList());
         }
 
-        private void buttonMoviesUpload_Click(object sender, EventArgs e)
+        private void ButtonMoviesUpload_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FormMovieUpload());
         }
 
-        private void buttonStaredMovies_Click(object sender, EventArgs e)
+        private void ButtonStaredMovies_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FormMoviesAndSeriesList());
         }
 
-        private void buttonSeriesList_Click(object sender, EventArgs e)
+        private void ButtonSeriesList_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FormMoviesAndSeriesList());
         }
 
-        private void buttonSeriesUpload_Click(object sender, EventArgs e)
+        private void ButtonSeriesUpload_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FormSeriesUpload());
         }
 
-        private void buttonStaredSeries_Click(object sender, EventArgs e)
+        private void ButtonStaredSeries_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FormMoviesAndSeriesList());
+        }
+
+        private void ButtonHelp_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/MrOxa/Movies_and_Series");
+        }
+
+        private void ButtonAbout_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/MrOxa/Movies_and_Series");
         }
     }
 }

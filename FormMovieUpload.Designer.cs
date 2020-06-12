@@ -46,6 +46,8 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelName.AutoSize = true;
+            this.labelName.BackColor = System.Drawing.SystemColors.Control;
+            this.labelName.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.labelName.Location = new System.Drawing.Point(82, 61);
             this.labelName.Name = "labelName";
             this.labelName.Size = new System.Drawing.Size(35, 13);
@@ -58,6 +60,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelYear.AutoSize = true;
+            this.labelYear.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.labelYear.Location = new System.Drawing.Point(82, 125);
             this.labelYear.Name = "labelYear";
             this.labelYear.Size = new System.Drawing.Size(29, 13);
@@ -70,6 +73,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelActors.AutoSize = true;
+            this.labelActors.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.labelActors.Location = new System.Drawing.Point(82, 175);
             this.labelActors.Name = "labelActors";
             this.labelActors.Size = new System.Drawing.Size(37, 13);
@@ -82,6 +86,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelDescription.AutoSize = true;
+            this.labelDescription.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.labelDescription.Location = new System.Drawing.Point(82, 235);
             this.labelDescription.Name = "labelDescription";
             this.labelDescription.Size = new System.Drawing.Size(60, 13);
@@ -155,6 +160,7 @@
             this.Controls.Add(this.labelActors);
             this.Controls.Add(this.labelYear);
             this.Controls.Add(this.labelName);
+            this.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.Name = "FormMovieUpload";
             this.Text = "FormMovieUpload";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();

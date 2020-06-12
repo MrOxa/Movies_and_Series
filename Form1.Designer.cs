@@ -82,6 +82,7 @@
             this.buttonAbout.Text = "About";
             this.buttonAbout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonAbout.UseVisualStyleBackColor = false;
+            this.buttonAbout.Click += new System.EventHandler(this.ButtonAbout_Click);
             // 
             // buttonHelp
             // 
@@ -102,6 +103,7 @@
             this.buttonHelp.Text = "Help";
             this.buttonHelp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonHelp.UseVisualStyleBackColor = false;
+            this.buttonHelp.Click += new System.EventHandler(this.ButtonHelp_Click);
             // 
             // panelSeries
             // 
@@ -131,7 +133,7 @@
             this.buttonStaredSeries.Text = "Started Series";
             this.buttonStaredSeries.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonStaredSeries.UseVisualStyleBackColor = false;
-            this.buttonStaredSeries.Click += new System.EventHandler(this.buttonStaredSeries_Click);
+            this.buttonStaredSeries.Click += new System.EventHandler(this.ButtonStaredSeries_Click);
             // 
             // buttonSeriesUpload
             // 
@@ -150,7 +152,7 @@
             this.buttonSeriesUpload.Text = "Series Upload";
             this.buttonSeriesUpload.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonSeriesUpload.UseVisualStyleBackColor = false;
-            this.buttonSeriesUpload.Click += new System.EventHandler(this.buttonSeriesUpload_Click);
+            this.buttonSeriesUpload.Click += new System.EventHandler(this.ButtonSeriesUpload_Click);
             // 
             // buttonSeriesList
             // 
@@ -169,7 +171,7 @@
             this.buttonSeriesList.Text = "Series List";
             this.buttonSeriesList.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonSeriesList.UseVisualStyleBackColor = false;
-            this.buttonSeriesList.Click += new System.EventHandler(this.buttonSeriesList_Click);
+            this.buttonSeriesList.Click += new System.EventHandler(this.ButtonSeriesList_Click);
             // 
             // SeriesButton
             // 
@@ -220,7 +222,7 @@
             this.buttonStaredMovies.Text = "Started Movies";
             this.buttonStaredMovies.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonStaredMovies.UseVisualStyleBackColor = false;
-            this.buttonStaredMovies.Click += new System.EventHandler(this.buttonStaredMovies_Click);
+            this.buttonStaredMovies.Click += new System.EventHandler(this.ButtonStaredMovies_Click);
             // 
             // buttonMoviesUpload
             // 
@@ -239,7 +241,7 @@
             this.buttonMoviesUpload.Text = "Movie Upload";
             this.buttonMoviesUpload.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonMoviesUpload.UseVisualStyleBackColor = false;
-            this.buttonMoviesUpload.Click += new System.EventHandler(this.buttonMoviesUpload_Click);
+            this.buttonMoviesUpload.Click += new System.EventHandler(this.ButtonMoviesUpload_Click);
             // 
             // buttonMoviesList
             // 
@@ -258,7 +260,7 @@
             this.buttonMoviesList.Text = "Movies List";
             this.buttonMoviesList.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonMoviesList.UseVisualStyleBackColor = false;
-            this.buttonMoviesList.Click += new System.EventHandler(this.buttonMoviesList_Click);
+            this.buttonMoviesList.Click += new System.EventHandler(this.ButtonMoviesList_Click);
             // 
             // button1Movie
             // 
@@ -278,10 +280,12 @@
             this.button1Movie.Text = "Movies";
             this.button1Movie.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1Movie.UseVisualStyleBackColor = false;
-            this.button1Movie.Click += new System.EventHandler(this.button1Movie_Click);
+            this.button1Movie.Click += new System.EventHandler(this.Button1Movie_Click);
             // 
             // panel1Logo
             // 
+            this.panel1Logo.BackgroundImage = global::Movies_and_Series.Properties.Resources.logo;
+            this.panel1Logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1Logo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1Logo.Location = new System.Drawing.Point(0, 0);
             this.panel1Logo.Name = "panel1Logo";
