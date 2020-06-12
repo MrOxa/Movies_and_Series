@@ -11,6 +11,8 @@ namespace Movies_and_Series
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
+        public static List<Movie> MoviesList = new List<Movie>();
+        public static List<Series> SeriesList = new List<Series>();
         [STAThread]
         static void Main()
         {

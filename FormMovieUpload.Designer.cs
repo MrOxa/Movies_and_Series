@@ -32,12 +32,12 @@
             this.labelYear = new System.Windows.Forms.Label();
             this.labelActors = new System.Windows.Forms.Label();
             this.labelDescription = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.textBoxName = new System.Windows.Forms.TextBox();
+            this.numericUpDownYear = new System.Windows.Forms.NumericUpDown();
+            this.textBoxActors = new System.Windows.Forms.TextBox();
+            this.richTextBoxDescripton = new System.Windows.Forms.RichTextBox();
             this.buttonAdd = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownYear)).BeginInit();
             this.SuspendLayout();
             // 
             // labelName
@@ -93,58 +93,60 @@
             this.labelDescription.TabIndex = 3;
             this.labelDescription.Text = "Description";
             // 
-            // textBox1
+            // textBoxName
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.textBoxName.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(161, 61);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(352, 20);
-            this.textBox1.TabIndex = 4;
+            this.textBoxName.Location = new System.Drawing.Point(161, 61);
+            this.textBoxName.Name = "textBoxName";
+            this.textBoxName.Size = new System.Drawing.Size(352, 20);
+            this.textBoxName.TabIndex = 4;
             // 
-            // numericUpDown1
+            // numericUpDownYear
             // 
-            this.numericUpDown1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.numericUpDownYear.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.numericUpDown1.Location = new System.Drawing.Point(161, 125);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown1.TabIndex = 5;
+            this.numericUpDownYear.Location = new System.Drawing.Point(161, 125);
+            this.numericUpDownYear.Name = "numericUpDownYear";
+            this.numericUpDownYear.Size = new System.Drawing.Size(120, 20);
+            this.numericUpDownYear.TabIndex = 5;
             // 
-            // textBox2
+            // textBoxActors
             // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.textBoxActors.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.Location = new System.Drawing.Point(161, 175);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(352, 20);
-            this.textBox2.TabIndex = 6;
+            this.textBoxActors.Location = new System.Drawing.Point(161, 175);
+            this.textBoxActors.Name = "textBoxActors";
+            this.textBoxActors.Size = new System.Drawing.Size(352, 20);
+            this.textBoxActors.TabIndex = 6;
             // 
-            // richTextBox1
+            // richTextBoxDescripton
             // 
-            this.richTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.richTextBoxDescripton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.richTextBox1.Location = new System.Drawing.Point(161, 235);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(352, 201);
-            this.richTextBox1.TabIndex = 7;
-            this.richTextBox1.Text = "";
+            this.richTextBoxDescripton.Location = new System.Drawing.Point(161, 235);
+            this.richTextBoxDescripton.Name = "richTextBoxDescripton";
+            this.richTextBoxDescripton.Size = new System.Drawing.Size(352, 201);
+            this.richTextBoxDescripton.TabIndex = 7;
+            this.richTextBoxDescripton.Text = "";
             // 
             // buttonAdd
             // 
             this.buttonAdd.BackColor = System.Drawing.SystemColors.Highlight;
             this.buttonAdd.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.buttonAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonAdd.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.buttonAdd.Location = new System.Drawing.Point(0, 573);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(550, 36);
             this.buttonAdd.TabIndex = 8;
             this.buttonAdd.Text = "Add";
             this.buttonAdd.UseVisualStyleBackColor = false;
+            this.buttonAdd.Click += new System.EventHandler(this.ButtonAdd_Click);
             // 
             // FormMovieUpload
             // 
@@ -152,10 +154,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(550, 609);
             this.Controls.Add(this.buttonAdd);
-            this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.numericUpDown1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.richTextBoxDescripton);
+            this.Controls.Add(this.textBoxActors);
+            this.Controls.Add(this.numericUpDownYear);
+            this.Controls.Add(this.textBoxName);
             this.Controls.Add(this.labelDescription);
             this.Controls.Add(this.labelActors);
             this.Controls.Add(this.labelYear);
@@ -163,7 +165,7 @@
             this.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.Name = "FormMovieUpload";
             this.Text = "FormMovieUpload";
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownYear)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -175,10 +177,10 @@
         private System.Windows.Forms.Label labelYear;
         private System.Windows.Forms.Label labelActors;
         private System.Windows.Forms.Label labelDescription;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.TextBox textBoxName;
+        private System.Windows.Forms.NumericUpDown numericUpDownYear;
+        private System.Windows.Forms.TextBox textBoxActors;
+        private System.Windows.Forms.RichTextBox richTextBoxDescripton;
         private System.Windows.Forms.Button buttonAdd;
     }
 }

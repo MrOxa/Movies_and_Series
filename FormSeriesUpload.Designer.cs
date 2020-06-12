@@ -31,7 +31,7 @@
             this.buttonAdd = new System.Windows.Forms.Button();
             this.richTextBoxDescription = new System.Windows.Forms.RichTextBox();
             this.textBoxActors = new System.Windows.Forms.TextBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownYear = new System.Windows.Forms.NumericUpDown();
             this.textBoxName = new System.Windows.Forms.TextBox();
             this.labelDescription = new System.Windows.Forms.Label();
             this.labelActors = new System.Windows.Forms.Label();
@@ -39,9 +39,11 @@
             this.labelName = new System.Windows.Forms.Label();
             this.labelSeason = new System.Windows.Forms.Label();
             this.labelEpsisode = new System.Windows.Forms.Label();
-            this.textBoxSeason = new System.Windows.Forms.TextBox();
-            this.textBoxEpisode = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.numericUpDownSeason = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownEpisode = new System.Windows.Forms.NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownYear)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSeason)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEpisode)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonAdd
@@ -49,12 +51,14 @@
             this.buttonAdd.BackColor = System.Drawing.SystemColors.Highlight;
             this.buttonAdd.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.buttonAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonAdd.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.buttonAdd.Location = new System.Drawing.Point(0, 573);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(550, 36);
             this.buttonAdd.TabIndex = 17;
             this.buttonAdd.Text = "Add";
             this.buttonAdd.UseVisualStyleBackColor = false;
+            this.buttonAdd.Click += new System.EventHandler(this.ButtonAdd_Click);
             // 
             // richTextBoxDescription
             // 
@@ -77,15 +81,15 @@
             this.textBoxActors.Size = new System.Drawing.Size(352, 20);
             this.textBoxActors.TabIndex = 15;
             // 
-            // numericUpDown1
+            // numericUpDownYear
             // 
-            this.numericUpDown1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.numericUpDownYear.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.numericUpDown1.Location = new System.Drawing.Point(161, 89);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown1.TabIndex = 14;
+            this.numericUpDownYear.Location = new System.Drawing.Point(161, 89);
+            this.numericUpDownYear.Name = "numericUpDownYear";
+            this.numericUpDownYear.Size = new System.Drawing.Size(120, 20);
+            this.numericUpDownYear.TabIndex = 14;
             // 
             // textBoxName
             // 
@@ -175,39 +179,39 @@
             this.labelEpsisode.TabIndex = 19;
             this.labelEpsisode.Text = "Episode";
             // 
-            // textBoxSeason
+            // numericUpDownSeason
             // 
-            this.textBoxSeason.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.numericUpDownSeason.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxSeason.Location = new System.Drawing.Point(161, 189);
-            this.textBoxSeason.Name = "textBoxSeason";
-            this.textBoxSeason.Size = new System.Drawing.Size(352, 20);
-            this.textBoxSeason.TabIndex = 20;
+            this.numericUpDownSeason.Location = new System.Drawing.Point(161, 189);
+            this.numericUpDownSeason.Name = "numericUpDownSeason";
+            this.numericUpDownSeason.Size = new System.Drawing.Size(120, 20);
+            this.numericUpDownSeason.TabIndex = 20;
             // 
-            // textBoxEpisode
+            // numericUpDownEpisode
             // 
-            this.textBoxEpisode.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.numericUpDownEpisode.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxEpisode.Location = new System.Drawing.Point(161, 233);
-            this.textBoxEpisode.Name = "textBoxEpisode";
-            this.textBoxEpisode.Size = new System.Drawing.Size(352, 20);
-            this.textBoxEpisode.TabIndex = 21;
+            this.numericUpDownEpisode.Location = new System.Drawing.Point(161, 242);
+            this.numericUpDownEpisode.Name = "numericUpDownEpisode";
+            this.numericUpDownEpisode.Size = new System.Drawing.Size(120, 20);
+            this.numericUpDownEpisode.TabIndex = 21;
             // 
             // FormSeriesUpload
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(550, 609);
-            this.Controls.Add(this.textBoxEpisode);
-            this.Controls.Add(this.textBoxSeason);
+            this.Controls.Add(this.numericUpDownEpisode);
+            this.Controls.Add(this.numericUpDownSeason);
             this.Controls.Add(this.labelEpsisode);
             this.Controls.Add(this.labelSeason);
             this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.richTextBoxDescription);
             this.Controls.Add(this.textBoxActors);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.numericUpDownYear);
             this.Controls.Add(this.textBoxName);
             this.Controls.Add(this.labelDescription);
             this.Controls.Add(this.labelActors);
@@ -215,7 +219,9 @@
             this.Controls.Add(this.labelName);
             this.Name = "FormSeriesUpload";
             this.Text = "FormSeriesUpload";
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownYear)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSeason)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEpisode)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -226,7 +232,7 @@
         private System.Windows.Forms.Button buttonAdd;
         private System.Windows.Forms.RichTextBox richTextBoxDescription;
         private System.Windows.Forms.TextBox textBoxActors;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown numericUpDownYear;
         private System.Windows.Forms.TextBox textBoxName;
         private System.Windows.Forms.Label labelDescription;
         private System.Windows.Forms.Label labelActors;
@@ -234,7 +240,7 @@
         private System.Windows.Forms.Label labelName;
         private System.Windows.Forms.Label labelSeason;
         private System.Windows.Forms.Label labelEpsisode;
-        private System.Windows.Forms.TextBox textBoxSeason;
-        private System.Windows.Forms.TextBox textBoxEpisode;
+        private System.Windows.Forms.NumericUpDown numericUpDownSeason;
+        private System.Windows.Forms.NumericUpDown numericUpDownEpisode;
     }
 }

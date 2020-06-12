@@ -10,13 +10,12 @@ namespace Movies_and_Series
     //Because a Series episode a short movie
     public class Series : Movie
     {
-        public Series(string Name, int Year, string Description,int Season, int Episode, params string[] Actors) : base(Name,Year, Description,  Actors)
+        public Series(string Name, string Year, string Description,string Season, string Episode, params string[] Actors) : base(Name,Year, Description,  Actors)
         {
-            this.Season = Season;
-            this.Episode = Episode;
+            this.Season = Convert.ToInt32(Season);
+            this.Episode = Convert.ToInt32(Episode);
         }
-        public int Season { get; set; }
+        public int Season { get; set ; }
         public int Episode { get; set; }
-
     }
 }

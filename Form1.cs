@@ -48,7 +48,7 @@ namespace Movies_and_Series
 
         private void ButtonMoviesList_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FormMoviesAndSeriesList());
+            OpenChildForm(new FormMoviesAndSeriesList(true,false));
         }
 
         private void ButtonMoviesUpload_Click(object sender, EventArgs e)
@@ -58,12 +58,12 @@ namespace Movies_and_Series
 
         private void ButtonStaredMovies_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FormMoviesAndSeriesList());
+            OpenChildForm(new FormMoviesAndSeriesList(true,true));
         }
 
         private void ButtonSeriesList_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FormMoviesAndSeriesList());
+            OpenChildForm(new FormMoviesAndSeriesList(false,false));
         }
 
         private void ButtonSeriesUpload_Click(object sender, EventArgs e)
@@ -73,7 +73,7 @@ namespace Movies_and_Series
 
         private void ButtonStaredSeries_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FormMoviesAndSeriesList());
+            OpenChildForm(new FormMoviesAndSeriesList(false,true));
         }
 
         private void ButtonHelp_Click(object sender, EventArgs e)
